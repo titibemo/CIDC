@@ -18,13 +18,13 @@ app.use(cors({ origin: process.env.IP_ADDRESS }));
 
 console.log(process.env.IP_ADDRESS);
 
-
+const isProduction = process.env.NODE_ENV === 'production';
 
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    database: process.env.DB_NAME
-
+    host: isProduction ? process.env.PROD_DB_HOST : process.env.DB_HOST,
+    user: isProduction ? process.env.PROD_DB_HOST : process.env.DB_USER,
+    password: isProduction ? process.env.PROD_DB_PASSWORD : '',
+    database: isProduction ? process.env.PROD_DB_NAME : process.env.DB_NAME
 })
 
 db.connect((err) => {
