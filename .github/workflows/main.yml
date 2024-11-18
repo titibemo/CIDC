@@ -52,9 +52,7 @@ jobs:
       - name: Install frontend
         run: |
           cd frontend
-          rm -rf node_modules package-lock.json 
-          npm uninstall -g @vue/cli
-          npm install -g @vue/cli
+          npm i @vue/cli-service
           npm install
 
       # 6. Build du frontend
