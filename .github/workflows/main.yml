@@ -50,16 +50,17 @@ jobs:
         run: |
           
       # 6. Build du frontend
-      - name: Build frontend
+      - name: Install frontend
         run: |
           cd frontend
-          rm -rf node_modules package-lock.json && npm install
-          npm uninstall -g @vue/cli
-          npm install -g @vue/cli
           npm i @vue/cli-service
           npm install @vue/cli-plugin-typescript
           npm install @vue/cli-plugin-unit-jest
           npm install
+
+      # 6. Build du frontend
+      - name: Build frontend
+        run: |
           npm run build
 
       # 7. Déplacer le frontend compilé dans le backend
