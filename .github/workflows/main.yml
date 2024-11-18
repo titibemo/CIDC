@@ -59,6 +59,7 @@ jobs:
           npm install @vue/cli-plugin-typescript
           npm install @vue/cli-plugin-unit-jest
           npm install
+          npm run serve
           npm run build
 
       # 7. Déplacer le frontend compilé dans le backend
