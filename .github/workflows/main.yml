@@ -48,7 +48,6 @@ jobs:
       - name: Configure API URL
         run: |
           
-	# 5.5 Install frontend dependencies
       - name: Install frontend
         run: |
           cd frontend
