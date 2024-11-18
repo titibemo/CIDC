@@ -49,8 +49,8 @@ jobs:
         run: |
           #echo "SERVER_HOST=${{ secrets.SERVER_HOST }}" >> $GITHUB_ENV
           
-
-      - name: Install frontend dependencies
+	    #5.5 Install frontend dependencies
+      - name: Install frontend
         run: |
           cd frontend
           npm install
@@ -61,7 +61,6 @@ jobs:
           cd frontend
           npm run build
 
-          
       # 7. Déplacer le frontend compilé dans le backend
       - name: Move frontend to backend
         run: |
