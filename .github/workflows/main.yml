@@ -47,7 +47,6 @@ jobs:
       # 5. Modifier l’API URL selon l’environnement
       - name: Configure API URL
         run: |
-          #echo "SERVER_HOST=${{ secrets.SERVER_HOST }}" >> $GITHUB_ENV
           
 	# 5.5 Install frontend dependencies
       - name: Install frontend
