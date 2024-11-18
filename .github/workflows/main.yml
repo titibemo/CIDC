@@ -46,12 +46,15 @@ jobs:
       # 5. Modifier l’API URL selon l’environnement
       - name: Configure API URL
         run: |
+          echo "SERVER_HOST=${{ secrets.SERVER_HOST }}" >> $GITHUB_ENV
           
         
 
       # 6. Build du frontend
       - name: Build frontend
         run: |
+          cd frontend
+          npm run build
 
       # 7. Déplacer le frontend compilé dans le backend
       - name: Move frontend to backend
