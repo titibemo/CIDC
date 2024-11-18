@@ -23,7 +23,7 @@ jobs:
         run: |
           cd backend
           npm install
-          npm i @vue/cli-service
+  
 
       # 3. Mettre le NODE_ENV en production
       - name: Set NODE_ENV to production
@@ -53,6 +53,7 @@ jobs:
         run: |
           cd frontend
           npm install
+          npm i @vue/cli-service
 
       # 6. Build du frontend
       - name: Build frontend
