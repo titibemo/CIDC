@@ -50,14 +50,18 @@ jobs:
           #echo "SERVER_HOST=${{ secrets.SERVER_HOST }}" >> $GITHUB_ENV
           
 
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm install
+
       # 6. Build du frontend
       - name: Build frontend
         run: |
           cd frontend
-          npm install
-          npx vue-cli-service
           npm run build
 
+          
       # 7. Déplacer le frontend compilé dans le backend
       - name: Move frontend to backend
         run: |
