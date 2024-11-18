@@ -51,6 +51,7 @@ jobs:
           
       - name: Install frontend
         run: |
+          cd frontend
           npm i @vue/cli-service
           npm install @vue/cli-plugin-typescript
           npm install @vue/cli-plugin-unit-jest
