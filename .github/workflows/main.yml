@@ -49,7 +49,7 @@ jobs:
         run: |
           #echo "SERVER_HOST=${{ secrets.SERVER_HOST }}" >> $GITHUB_ENV
           
-	    #5.5 Install frontend dependencies
+	# 5.5 Install frontend dependencies
       - name: Install frontend
         run: |
           cd frontend
