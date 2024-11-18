@@ -55,6 +55,7 @@ jobs:
         run: |
           cd frontend
           npm install
+          npx vue-cli-service
           npm run build
 
       # 7. Déplacer le frontend compilé dans le backend
