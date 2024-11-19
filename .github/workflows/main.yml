@@ -52,7 +52,9 @@ jobs:
       # 6. Build du frontend
       - name: Install frontend
         run: |
+          pwd
           cd frontend
+          pwd
           npm i @vue/cli-service
           npm install @vue/cli-plugin-typescript
           npm install @vue/cli-plugin-unit-jest
