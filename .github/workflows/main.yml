@@ -53,7 +53,7 @@ jobs:
       - name: Install frontend
         run: |
           pwd
-          cc ..
+          cd ..
           cd cicd/frontend
           pwd
           npm i @vue/cli-service
