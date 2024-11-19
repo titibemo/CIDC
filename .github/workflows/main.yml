@@ -52,6 +52,7 @@ jobs:
       # 6. Build du frontend
       - name: Install frontend
         run: |
+          cd ..
           pwd
           cd frontend
           pwd
