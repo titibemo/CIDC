@@ -21,6 +21,7 @@ jobs:
       # 2. Installer les dépendances
       - name: Install dependencies
         run: |
+          pwd
           cd backend
           npm install
   
