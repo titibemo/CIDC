@@ -12,6 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Vérifier le répertoire initial
+        run: |
+          pwd
+          ls -la
+
       # 1. Installer Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
