@@ -61,7 +61,6 @@ jobs:
       # 6. Build du frontend
       - name: Build frontend
         run: |
-          pwd
           cd ..
           pwd
           cd frontend
