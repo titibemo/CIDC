@@ -64,17 +64,8 @@ jobs:
           npm install @vue/cli-plugin-typescript
           npm install @vue/cli-plugin-unit-jest
           npm install
-
-      - name: Build frontend
-        run: |
-          # Vérifie où on se trouve
-          pwd
-          ls -la
-          # Aller directement dans le répertoire frontend
-          cd frontend
-          pwd
           npm run build
-
+          
       # 7. Déplacer le frontend compilé dans le backend
       - name: Move frontend to backend
         run: |
