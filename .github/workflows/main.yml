@@ -12,10 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Vérifier le répertoire initial
-        run: |
-          pwd
-          ls -la
+        
 
       # 1. Installer Node.js
       - name: Set up Node.js
@@ -55,24 +52,26 @@ jobs:
       - name: Configure API URL
         run: |
           
-      # 6. Build du frontend
       - name: Install frontend
         run: |
+          # Vérifie où on se trouve
           pwd
-          cd ..
-          cd cicd/frontend
+          ls -la
+          # Aller directement dans le répertoire frontend
+          cd frontend
           pwd
           npm i @vue/cli-service
           npm install @vue/cli-plugin-typescript
           npm install @vue/cli-plugin-unit-jest
           npm install
 
-      # 6. Build du frontend
       - name: Build frontend
         run: |
+          # Vérifie où on se trouve
           pwd
-          cd ..
-          cd cicd/frontend
+          ls -la
+          # Aller directement dans le répertoire frontend
+          cd frontend
           pwd
           npm run build
 
