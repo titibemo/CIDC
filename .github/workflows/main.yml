@@ -50,27 +50,25 @@ jobs:
         run: |
           
       # 6. Build du frontend
-      - name: Install frontend
-        run: |
-          cd ..
-          pwd
-          cd frontend
-          pwd
-          npm i @vue/cli-service
-          npm install @vue/cli-plugin-typescript
-          npm install @vue/cli-plugin-unit-jest
-          npm install
+    - name: Install frontend
+      run: |
+        # Affiche le répertoire de travail initial
+        pwd
+        # Se déplace directement dans le répertoire frontend
+        cd cicd/frontend
+        pwd
+        npm i @vue/cli-service
+        npm install @vue/cli-plugin-typescript
+        npm install @vue/cli-plugin-unit-jest
+        npm install
 
-      # 6. Build du frontend
-      - name: Build frontend
-        run: |
-          pwd
-          cd ..
-          pwd
-          cd frontend
-          pwd
-          cd frontend
-          npm run build
+    - name: Build frontend
+      run: |
+        # Affiche le répertoire de travail initial
+        pwd
+        # Se déplace dans le répertoire frontend
+        cd cicd/frontend
+        pwd
 
       # 7. Déplacer le frontend compilé dans le backend
       - name: Move frontend to backend
