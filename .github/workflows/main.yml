@@ -64,6 +64,7 @@ jobs:
           cd ..
           pwd
           cd frontend
+          cd frontend
           npm run build
 
       # 7. Déplacer le frontend compilé dans le backend
